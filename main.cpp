@@ -567,12 +567,12 @@ int main()
                 1.3f, 1.1f, 0.5f, black[0], black[1], black[2],
                 1.3f, 1.1f, 0.46f, black[0], black[1], black[2],
                 // TV handle top 348-353
-                1.2f, 1.2f, 0.5f, woodD[0], woodD[1], woodD[2],
-                1.3f, 1.1f, 0.5f, woodD[0], woodD[1], woodD[2],
-                1.4f, 1.2f, 0.5f, woodD[0], woodD[1], woodD[2],
-                1.4f, 1.2f, 0.5f, woodD[0], woodD[1], woodD[2],
-                1.3f, 1.3f, 0.5f, woodD[0], woodD[1], woodD[2],
-                1.2f, 1.2f, 0.5f, woodD[0], woodD[1], woodD[2],
+                1.2f, 1.2f, 0.5f, black[0], black[1], black[2],
+                1.3f, 1.1f, 0.5f, black[0], black[1], black[2],
+                1.4f, 1.2f, 0.5f, black[0], black[1], black[2],
+                1.4f, 1.2f, 0.5f, black[0], black[1], black[2],
+                1.3f, 1.3f, 0.5f, black[0], black[1], black[2],
+                1.2f, 1.2f, 0.5f, black[0], black[1], black[2],
 
                 // TV Back face 354-359
                 0.9f, 1.3f, 0.5f, black[0], black[1], black[2],
@@ -582,17 +582,49 @@ int main()
                 0.9f, 1.3f, 1.0f, black[0], black[1], black[2],
                 0.9f, 1.3f, 0.5f, black[0], black[1], black[2],
 
-                // TV Back face 360-365
-                0.9f, 1.3f, 0.5f, black[0], black[1], black[2],
-                1.8f, 1.2f, 0.5f, black[0], black[1], black[2],
-                1.8f, 1.2f, 1.0f, black[0], black[1], black[2],
-                1.8f, 1.2f, 1.0f, black[0], black[1], black[2],
+                // TV Front face 360-365
+                0.9f, 1.2f, 0.5f, black[0], black[1], black[2],
+                1.8f, 1.1f, 0.5f, black[0], black[1], black[2],
+                1.8f, 1.1f, 1.0f, black[0], black[1], black[2],
+                1.8f, 1.1f, 1.0f, black[0], black[1], black[2],
+                0.9f, 1.2f, 1.0f, black[0], black[1], black[2],
+                0.9f, 1.2f, 0.5f, black[0], black[1], black[2],
+
+                // TV side wrapper 366-371
+                0.9f, 1.2f, 1.0f, black[0], black[1], black[2],
                 0.9f, 1.3f, 1.0f, black[0], black[1], black[2],
                 0.9f, 1.3f, 0.5f, black[0], black[1], black[2],
+                0.9f, 1.3f, 0.5f, black[0], black[1], black[2],
+                0.9f, 1.2f, 0.5f, black[0], black[1], black[2],
+                0.9f, 1.2f, 1.0f, black[0], black[1], black[2],
+
+                // TV side wrapper 372-377
+                1.8f, 1.1f, 1.0f, black[0], black[1], black[2],
+                1.8f, 1.2f, 1.0f, black[0], black[1], black[2],
+                1.8f, 1.2f, 0.5f, black[0], black[1], black[2],
+                1.8f, 1.2f, 0.5f, black[0], black[1], black[2],
+                1.8f, 1.1f, 0.5f, black[0], black[1], black[2],
+                1.8f, 1.1f, 1.0f, black[0], black[1], black[2],
+
+                // TV bottom wrapper 378-383
+                1.8f, 1.2f, 0.5f, black[0], black[1], black[2],
+                0.9f, 1.3f, 0.5f, black[0], black[1], black[2],
+                0.9f, 1.2f, 0.5f, black[0], black[1], black[2],
+                0.9f, 1.2f, 0.5f, black[0], black[1], black[2],
+                1.8f, 1.1f, 0.5f, black[0], black[1], black[2],
+                1.8f, 1.2f, 0.5f, black[0], black[1], black[2],
+
+                // TV top wrapper 384-389
+                1.8f, 1.2f, 1.0f, black[0], black[1], black[2],
+                0.9f, 1.3f, 1.0f, black[0], black[1], black[2],
+                0.9f, 1.2f, 1.0f, black[0], black[1], black[2],
+                0.9f, 1.2f, 1.0f, black[0], black[1], black[2],
+                1.8f, 1.1f, 1.0f, black[0], black[1], black[2],
+                1.8f, 1.2f, 1.0f, black[0], black[1], black[2],
 
     };
 
-    const int total = 360;
+    const int total = 390;
     
     unsigned int cube_indices[total] = {
         /*0, 1, 2, 3, 4, 5,
