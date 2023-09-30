@@ -292,14 +292,38 @@ int main()
             -1.0f, -1.5f, 0.5f, woodD[0], woodD[1], woodD[2],
             -1.0f, -1.5f, 0.4f, woodD[0], woodD[1], woodD[2],
 
-            // Sofa bottom side 132-137
+            // Table right side 132-137
+            1.0f, -1.5f, 0.5f, woodD[0], woodD[1], woodD[2],
+            1.0f, -1.5f, 0.4f, woodD[0], woodD[1], woodD[2],
+            1.0f, -0.5f, 0.4f, woodD[0], woodD[1], woodD[2],
+            1.0f, -0.5f, 0.4f, woodD[0], woodD[1], woodD[2],
+            1.0f, -0.5f, 0.5f, woodD[0], woodD[1], woodD[2],
+            1.0f, -1.5f, 0.5f, woodD[0], woodD[1], woodD[2],
+
+            // Table back side 138-143
+            1.0f, -0.5f, 0.5f, woodD[0], woodD[1], woodD[2],
+            1.0f, -0.5f, 0.4f, woodD[0], woodD[1], woodD[2],
+            -1.0f, -0.5f, 0.4f, woodD[0], woodD[1], woodD[2],
+            -1.0f, -0.5f, 0.4f, woodD[0], woodD[1], woodD[2],
+            -1.0f, -0.5f, 0.5f, woodD[0], woodD[1], woodD[2],
+            1.0f, -0.5f, 0.5f, woodD[0], woodD[1], woodD[2],
+
+            // Table left side 144-149
+            -1.0f, -0.5f, 0.5f, woodD[0], woodD[1], woodD[2],
+            -1.0f, -0.5f, 0.4f, woodD[0], woodD[1], woodD[2],
+            -1.0f, -1.5f, 0.4f, woodD[0], woodD[1], woodD[2],
+            -1.0f, -1.5f, 0.4f, woodD[0], woodD[1], woodD[2],
+            -1.0f, -1.5f, 0.5f, woodD[0], woodD[1], woodD[2],
+            -1.0f, -0.5f, 0.5f, woodD[0], woodD[1], woodD[2],
+
+            // Sofa bottom side 150-155
             1.3f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.8f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.3f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.3f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            // Sofa top side 138-143
+            // Sofa top side 156-161
             1.3f, -1.4f, 0.3f, 0.0f, 0.0f, 1.0f,
             1.8f, -1.4f, 0.3f, 0.0f, 0.0f, 1.0f,
             1.8f, -0.5f, 0.3f, 0.0f, 0.0f, 1.0f,
@@ -307,35 +331,35 @@ int main()
             1.3f, -0.5f, 0.3f, 0.0f, 0.0f, 1.0f,
             1.3f, -1.4f, 0.3f, 0.0f, 0.0f, 1.0f,
 
-            // Sofa back side 144-149 back face
+            // Sofa back side  back face 162-167
             1.3f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.3f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.3f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
-            // 150-155 back side front face
+            //  back side front face 168-173
             1.3f, -0.5f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.5f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.5f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.5f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.3f, -0.5f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.3f, -0.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            // 156-161 back handle top
+            //  back handle top 174-179
             1.3f, -0.5f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.5f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.3f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.3f, -0.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            // 162-167  back handle front
+            //   back handle front 180-185
             1.3f, -0.5f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.3f, -0.5f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.3f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.3f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.3f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.3f, -0.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            // 168-173 back handle back
+            //  back handle back 186-191
             1.8f, -0.5f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.5f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
@@ -343,42 +367,42 @@ int main()
             1.8f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.5f, 0.01f, 0.7f, 0.3f, 0.2f,
 
-            // front handle front face 174-179
-            1.3f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            // front handle back face 180-185
-            1.3f, -1.4f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.4f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.4f, 0.01f, 0.7f, 0.3f, 0.2f,
-            // front handle top face 186-191
-            1.3f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
             // front handle front face 192-197
             1.3f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
+            1.8f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
+            1.8f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
+            1.8f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
+            1.3f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
+            1.3f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
+            // front handle back face 198-203
+            1.3f, -1.4f, 0.01f, 0.7f, 0.3f, 0.2f,
+            1.8f, -1.4f, 0.01f, 0.7f, 0.3f, 0.2f,
+            1.8f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
+            1.8f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
+            1.3f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
+            1.3f, -1.4f, 0.01f, 0.7f, 0.3f, 0.2f,
+            // front handle top face 204-209
+            1.3f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
+            1.8f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
+            1.8f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
+            1.8f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
+            1.3f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
+            1.3f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
+            // front handle front face 210-215
+            1.3f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.3f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.3f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.3f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.3f, -1.4f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.3f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            // front handle back face 198-203
+            // front handle back face 216-221
             1.8f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.8f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.8f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.8f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
             1.8f, -1.4f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.8f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            // front sofa front face 204-209
+            // front sofa front face 222-227
             1.3f, -0.5f, 0.01f, 0.0f, 0.0f, 0.0f,
             1.3f, -1.4f, 0.01f, 0.0f, 0.0f, 0.0f,
             1.3f, -1.4f, 0.3f, 0.0f, 0.0f, 0.0f,
@@ -386,7 +410,7 @@ int main()
             1.3f, -0.5f, 0.3f, 0.0f, 0.0f, 0.0f,
             1.3f, -0.5f, 0.01f, 0.0f, 0.0f, 0.0f,
 
-            // back sofa back face 210-215
+            // back sofa back face 228-233
             1.8f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.8f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
             1.8f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
@@ -394,14 +418,14 @@ int main()
             1.8f, -0.4f, 1.0f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
 
-            // back sofa front face 216-221
+            // back sofa front face 234-239
             1.7f, -0.5f, 0.3f, 0.0f, 0.4f, 1.0f,
             1.7f, -1.4f, 0.3f, 0.0f, 0.4f, 1.0f,
             1.7f, -1.4f, 1.0f, 0.0f, 0.4f, 1.0f,
             1.7f, -1.4f, 1.0f, 0.0f, 0.4f, 1.0f,
             1.7f, -0.5f, 1.0f, 0.0f, 0.4f, 1.0f,
             1.7f, -0.5f, 0.3f, 0.0f, 0.4f, 1.0f,
-            // back sofa front face right front 222-227
+            // back sofa front face right front 240-245
             1.7f, -0.4f, 0.3f, 0.7f, 0.3f, 0.2f,
             1.7f, -0.5f, 0.3f, 0.7f, 0.3f, 0.2f,
             1.7f, -0.5f, 1.0f, 0.7f, 0.3f, 0.2f,
@@ -409,7 +433,7 @@ int main()
             1.7f, -0.4f, 1.0f, 0.7f, 0.3f, 0.2f,
             1.7f, -0.4f, 0.3f, 0.7f, 0.3f, 0.2f,
 
-            // back sofa front face left front 228-233
+            // back sofa front face left front 246-251
             1.7f, -1.4f, 0.3f, 0.7f, 0.3f, 0.2f,
             1.7f, -1.5f, 0.3f, 0.7f, 0.3f, 0.2f,
             1.7f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
@@ -417,7 +441,7 @@ int main()
             1.7f, -1.4f, 1.0f, 0.7f, 0.3f, 0.2f,
             1.7f, -1.4f, 0.3f, 0.7f, 0.3f, 0.2f,
 
-            // left handle left face 234-239
+            // left handle left face 252-257
             1.8f, -0.4f, 0.3f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.4f, 1.0f, 0.7f, 0.3f, 0.2f,
             1.7f, -0.4f, 1.0f, 0.7f, 0.3f, 0.2f,
@@ -425,14 +449,14 @@ int main()
             1.7f, -0.4f, 0.3f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.4f, 0.3f, 0.7f, 0.3f, 0.2f,
 
-            // right handle right face 240-245
+            // right handle right face 258-263
             1.8f, -1.5f, 0.3f, 0.7f, 0.3f, 0.2f,
             1.8f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
             1.7f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
             1.7f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
             1.7f, -1.5f, 0.3f, 0.7f, 0.3f, 0.2f,
             1.8f, -1.5f, 0.3f, 0.7f, 0.3f, 0.2f,
-            // back top face 246-251
+            // back top face 264-269
             1.7f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
             1.8f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
             1.8f, -0.4f, 1.0f, 0.7f, 0.3f, 0.2f,
@@ -441,7 +465,7 @@ int main()
             1.7f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
 
             // TV Box Stand 
-                //bottom 252-257
+                //bottom 270-275
                 1.0f, 1.2f, 0.001f, woodD[0], woodD[1], woodD[2],
                 1.3f, 0.8f, 0.001f, woodD[0], woodD[1], woodD[2],
                 1.6f, 1.2f, 0.001f, woodD[0], woodD[1], woodD[2],
@@ -449,7 +473,7 @@ int main()
                 1.3f, 1.6f, 0.001f, woodD[0], woodD[1], woodD[2],
                 1.0f, 1.2f, 0.001f, woodD[0], woodD[1], woodD[2],
 
-                // 1st wrapper box 258-263
+                // 1st wrapper box 276-281
                 1.0f, 1.2f, 0.0f, woodD[0], woodD[1], woodD[2],
                 1.3f, 1.6f, 0.0f, woodD[0], woodD[1], woodD[2],
                 1.3f, 1.6f, 0.4f, woodD[0], woodD[1], woodD[2],
@@ -457,7 +481,7 @@ int main()
                 1.0f, 1.2f, 0.4f, woodD[0], woodD[1], woodD[2],
                 1.0f, 1.2f, 0.0f, woodD[0], woodD[1], woodD[2],
 
-                // 2nd wrapper box 264-269
+                // 2nd wrapper box 282-287
                 1.0f, 1.2f, 0.0f, woodD[0], woodD[1], woodD[2],
                 1.0f, 1.2f, 0.4f, woodD[0], woodD[1], woodD[2],
                 1.3f, 0.8f, 0.4f, woodD[0], woodD[1], woodD[2],
@@ -465,7 +489,7 @@ int main()
                 1.3f, 0.8f, 0.0f, woodD[0], woodD[1], woodD[2],
                 1.0f, 1.2f, 0.0f, woodD[0], woodD[1], woodD[2],
 
-                // 3rd wrapper box 270-275
+                // 3rd wrapper box 288-293
                 1.3f, 0.8f, 0.4f, wood[0], wood[1], wood[2],
                 1.6f, 1.2f, 0.4f, wood[0], wood[1], wood[2],
                 1.6f, 1.2f, 0.0f, wood[0], wood[1], wood[2],
@@ -473,7 +497,7 @@ int main()
                 1.3f, 0.8f, 0.0f, wood[0], wood[1], wood[2],
                 1.3f, 0.8f, 0.4f, wood[0], wood[1], wood[2],
 
-                // 4th wrapper box 276-281
+                // 4th wrapper box 294-299
                 1.6f, 1.2f, 0.0f, woodD[0], woodD[1], woodD[2],
                 1.6f, 1.2f, 0.4f, woodD[0], woodD[1], woodD[2],
                 1.3f, 1.6f, 0.4f, woodD[0], woodD[1], woodD[2],
@@ -481,21 +505,21 @@ int main()
                 1.3f, 1.6f, 0.0f, woodD[0], woodD[1], woodD[2],
                 1.6f, 1.2f, 0.0f, woodD[0], woodD[1], woodD[2],
 
-                // TV BOX Top Plate bottom sheet 282-287
+                // TV BOX Top Plate bottom sheet 300-305
                 0.9f, 1.2f, 0.4f, woodD[0], woodD[1], woodD[2],
                 1.3f, 0.7f, 0.4f, woodD[0], woodD[1], woodD[2],
                 1.7f, 1.2f, 0.4f, woodD[0], woodD[1], woodD[2],
                 1.7f, 1.2f, 0.4f, woodD[0], woodD[1], woodD[2],
                 1.3f, 1.7f, 0.4f, woodD[0], woodD[1], woodD[2],
                 0.9f, 1.2f, 0.4f, woodD[0], woodD[1], woodD[2],
-                // TV BOX Top Plate top sheet 288-293
+                // TV BOX Top Plate top sheet 306-311
                 0.9f, 1.2f, 0.45f, wood[0], wood[1], wood[2],
                 1.3f, 0.7f, 0.45f, wood[0], wood[1], wood[2],
                 1.7f, 1.2f, 0.45f, wood[0], wood[1], wood[2],
                 1.7f, 1.2f, 0.45f, wood[0], wood[1], wood[2],
                 1.3f, 1.7f, 0.45f, wood[0], wood[1], wood[2],
                 0.9f, 1.2f, 0.45f, wood[0], wood[1], wood[2],
-                // bottom to top 1st wrapper 294-299
+                // bottom to top 1st wrapper 312-317
                 0.9f, 1.2f, 0.45f, woodD[0], woodD[1], woodD[2],
                 0.9f, 1.2f, 0.4f, woodD[0], woodD[1], woodD[2],
                 1.3f, 0.7f, 0.4f, woodD[0], woodD[1], woodD[2],
@@ -503,7 +527,7 @@ int main()
                 1.3f, 0.7f, 0.45f, woodD[0], woodD[1], woodD[2],
                 0.9f, 1.2f, 0.45f, woodD[0], woodD[1], woodD[2],
 
-                // bottom to top 2nd wrapper 300-305
+                // bottom to top 2nd wrapper 318-323
                 1.3f, 0.7f, 0.4f, wood[0], wood[1], wood[2],
                 1.7f, 1.2f, 0.4f, wood[0], wood[1], wood[2],
                 1.7f, 1.2f, 0.45f, wood[0], wood[1], wood[2],
@@ -511,7 +535,7 @@ int main()
                 1.3f, 0.7f, 0.45f, wood[0], wood[1], wood[2],
                 1.3f, 0.7f, 0.4f, wood[0], wood[1], wood[2],
 
-                // bottom to top 3rd wrapper 306-311
+                // bottom to top 3rd wrapper 324-329
                 1.7f, 1.2f, 0.4f, woodD[0], woodD[1], woodD[2],
                 1.3f, 1.7f, 0.4f, woodD[0], woodD[1], woodD[2],
                 1.3f, 1.7f, 0.45f, woodD[0], woodD[1], woodD[2],
@@ -519,7 +543,7 @@ int main()
                 1.7f, 1.2f, 0.45f, woodD[0], woodD[1], woodD[2],
                 1.7f, 1.2f, 0.4f, woodD[0], woodD[1], woodD[2],
 
-                // bottom to top 4th wrapper 312-317
+                // bottom to top 4th wrapper 330-335
                 0.9f, 1.2f, 0.4f, woodD[0], woodD[1], woodD[2],
                 1.3f, 1.7f, 0.4f, woodD[0], woodD[1], woodD[2],
                 1.3f, 1.7f, 0.45f, woodD[0], woodD[1], woodD[2],
@@ -527,7 +551,7 @@ int main()
                 0.9f, 1.2f, 0.45f, woodD[0], woodD[1], woodD[2],
                 0.9f, 1.2f, 0.4f, woodD[0], woodD[1], woodD[2],
 
-                // TV handle bottom 318-323
+                // TV handle bottom 336-341
                 1.2f, 1.3f, 0.46f, black[0], black[1], black[2],
                 1.2f, 1.1f, 0.46f, black[0], black[1], black[2],
                 1.4f, 1.1f, 0.46f, black[0], black[1], black[2],
@@ -535,7 +559,7 @@ int main()
                 1.4f, 1.3f, 0.46f, black[0], black[1], black[2],
                 1.2f, 1.3f, 0.46f, black[0], black[1], black[2],
 
-                // TV handle wrapper 324-329
+                // TV handle wrapper 342-347
                 1.4f, 1.1f, 0.46f, black[0], black[1], black[2],
                 1.4f, 1.1f, 0.5f, black[0], black[1], black[2],
                 1.4f, 1.3f, 0.5f, black[0], black[1], black[2],
@@ -543,7 +567,7 @@ int main()
                 1.4f, 1.3f, 0.46f, black[0], black[1], black[2],
                 1.4f, 1.1f, 0.46f, black[0], black[1], black[2],
 
-                // // TV handle wrapper 330-335 // jhamela
+                // // TV handle wrapper 348-353
                 1.4f, 1.3f, 0.46f, black[0], black[1], black[2],
                 1.4f, 1.3f, 0.5f, black[0], black[1], black[2],
                 1.2f, 1.3f, 0.5f, black[0], black[1], black[2],
@@ -551,7 +575,7 @@ int main()
                 1.2f, 1.3f, 0.46f, black[0], black[1], black[2],
                 1.4f, 1.3f, 0.46f, black[0], black[1], black[2],
 
-                //// TV handle wrapper 336-341
+                //// TV handle wrapper 354-359
                 1.2f, 1.3f, 0.46f, black[0], black[1], black[2],
                 1.2f, 1.3f, 0.5f, black[0], black[1], black[2],
                 1.2f, 1.1f, 0.5f, black[0], black[1], black[2],
@@ -559,14 +583,14 @@ int main()
                 1.2f, 1.1f, 0.46f, black[0], black[1], black[2],
                 1.2f, 1.3f, 0.46f, black[0], black[1], black[2],
 
-                //// TV handle wrapper 342-347
+                //// TV handle wrapper 360-365
                 1.2f, 1.1f, 0.46f, black[0], black[1], black[2],
                 1.2f, 1.1f, 0.5f, black[0], black[1], black[2],
                 1.4f, 1.1f, 0.5f, black[0], black[1], black[2],
                 1.4f, 1.1f, 0.5f, black[0], black[1], black[2],
                 1.4f, 1.1f, 0.46f, black[0], black[1], black[2],
                 1.2f, 1.1f, 0.46f, black[0], black[1], black[2],
-                //// TV handle top 348-353
+                //// TV handle top 366-371
                 1.2f, 1.3f, 0.5f, silverD[0], silverD[1], silverD[2],
                 1.2f, 1.1f, 0.5f, silverD[0], silverD[1], silverD[2],
                 1.4f, 1.1f, 0.5f, silverD[0], silverD[1], silverD[2],
@@ -574,7 +598,7 @@ int main()
                 1.4f, 1.3f, 0.5f, silverD[0], silverD[1], silverD[2],
                 1.2f, 1.3f, 0.5f, silverD[0], silverD[1], silverD[2],
 
-                // TV Bottom face 354-359
+                // TV Bottom face 372-377
                 0.75f, 1.35f, 0.51f, black[0], black[1], black[2],
                 1.75f, 0.95f, 0.51f, black[0], black[1], black[2],
                 1.8f, 1.0f, 0.51f, black[0], black[1], black[2],
@@ -582,7 +606,7 @@ int main()
                 0.8f, 1.4f, 0.51f, black[0], black[1], black[2],
                 0.75f, 1.35f, 0.51f, black[0], black[1], black[2],
 
-                // TV Top face 360-365
+                // TV Top face 378-383
                 0.75f, 1.35f, 1.0f, black[0], black[1], black[2],
                 1.75f, 0.95f, 1.0f, black[0], black[1], black[2],
                 1.8f, 1.0f, 1.0f, black[0], black[1], black[2],
@@ -590,7 +614,7 @@ int main()
                 0.8f, 1.4f, 1.0f, black[0], black[1], black[2],
                 0.75f, 1.35f, 1.0f, black[0], black[1], black[2],
 
-                // TV Left Side Face 366-371
+                // TV Left Side Face 384-389
                 1.75f, 0.95f, 0.51f, black[0], black[1], black[2],
                 1.75f, 0.95f, 1.0f, black[0], black[1], black[2],
                 1.8f, 1.0f, 1.0f, black[0], black[1], black[2],
@@ -598,7 +622,7 @@ int main()
                 1.8f, 1.0f, 0.51f, black[0], black[1], black[2],
                 1.75f, 0.95f, 0.51f, black[0], black[1], black[2],
 
-                // TV Right Side Face 372-377
+                // TV Right Side Face 390-395
                 0.8f, 1.4f, 0.51f, black[0], black[1], black[2],
                 0.8f, 1.4f, 1.0f, black[0], black[1], black[2],
                 0.75f, 1.35f, 1.0f, black[0], black[1], black[2],
@@ -606,7 +630,7 @@ int main()
                 0.75f, 1.35f, 0.51f, black[0], black[1], black[2],
                 0.8f, 1.4f, 0.51f, black[0], black[1], black[2],
 
-                // TV Back Face 378-383
+                // TV Back Face 396-401
                 1.8f, 1.0f, 0.51f, black[0], black[1], black[2],
                 1.8f, 1.0f, 1.0f, black[0], black[1], black[2],
                 0.8f, 1.4f, 1.0f, black[0], black[1], black[2],
@@ -614,7 +638,7 @@ int main()
                 0.8f, 1.4f, 0.51f, black[0], black[1], black[2],
                 1.8f, 1.0f, 0.51f, black[0], black[1], black[2],
 
-                // TV Back Face 384-389
+                // TV Back Face 402-407
                 0.75f, 1.35f, 0.51f, black[0], black[1], black[2],
                 0.75f, 1.35f, 1.0f, black[0], black[1], black[2],
                 1.75f, 0.95f, 1.0f, black[0], black[1], black[2],
@@ -622,20 +646,18 @@ int main()
                 1.75f, 0.95f, 0.51f, black[0], black[1], black[2],
                 0.75f, 1.35f, 0.51f, black[0], black[1], black[2],
 
-                // TV Glass Face 390-395
+                // TV Glass Face 408-413
                 0.77f, 1.33f, 0.54f, silverD[0], silverD[1], silverD[2],
                 0.77f, 1.33f, 0.97f, silverD[0], silverD[1], silverD[2],
                 1.73f, 0.93f, 0.97f, silverD[0], silverD[1], silverD[2],
                 1.73f, 0.93f, 0.97f, silverD[0], silverD[1], silverD[2],
                 1.73f, 0.93f, 0.54f, silverD[0], silverD[1], silverD[2],
                 0.77f, 1.33f, 0.54f, silverD[0], silverD[1], silverD[2],
-
-
-                
+                                
 
     };
 
-    const int total = 396;
+    const int total = 414;
     
     unsigned int cube_indices[total] = {
         /*0, 1, 2, 3, 4, 5,
