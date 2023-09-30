@@ -528,103 +528,114 @@ int main()
                 0.9f, 1.2f, 0.4f, woodD[0], woodD[1], woodD[2],
 
                 // TV handle bottom 318-323
-                1.2f, 1.2f, 0.46f, black[0], black[1], black[2],
-                1.3f, 1.1f, 0.46f, black[0], black[1], black[2],
-                1.4f, 1.2f, 0.46f, black[0], black[1], black[2],
-                1.4f, 1.2f, 0.46f, black[0], black[1], black[2],
-                1.3f, 1.3f, 0.46f, black[0], black[1], black[2],
-                1.2f, 1.2f, 0.46f, black[0], black[1], black[2],
+                1.2f, 1.3f, 0.46f, black[0], black[1], black[2],
+                1.2f, 1.1f, 0.46f, black[0], black[1], black[2],
+                1.4f, 1.1f, 0.46f, black[0], black[1], black[2],
+                1.4f, 1.1f, 0.46f, black[0], black[1], black[2],
+                1.4f, 1.3f, 0.46f, black[0], black[1], black[2],
+                1.2f, 1.3f, 0.46f, black[0], black[1], black[2],
 
                 // TV handle wrapper 324-329
-                1.4f, 1.2f, 0.46f, black[0], black[1], black[2],
-                1.3f, 1.1f, 0.46f, black[0], black[1], black[2],
-                1.3f, 1.1f, 0.5f, black[0], black[1], black[2],
-                1.3f, 1.1f, 0.5f, black[0], black[1], black[2],
-                1.4f, 1.2f, 0.5f, black[0], black[1], black[2],
-                1.4f, 1.2f, 0.46f, black[0], black[1], black[2],
+                1.4f, 1.1f, 0.46f, black[0], black[1], black[2],
+                1.4f, 1.1f, 0.5f, black[0], black[1], black[2],
+                1.4f, 1.3f, 0.5f, black[0], black[1], black[2],
+                1.4f, 1.3f, 0.5f, black[0], black[1], black[2],
+                1.4f, 1.3f, 0.46f, black[0], black[1], black[2],
+                1.4f, 1.1f, 0.46f, black[0], black[1], black[2],
 
-                 // TV handle wrapper 330-335 // jhamela
-                1.3f, 1.3f, 0.46f, black[0], black[1], black[2],
-                1.4f, 1.2f, 0.46f, black[0], black[1], black[2],
-                1.4f, 1.2f, 0.5f, black[0], black[1], black[2],
-                1.4f, 1.2f, 0.5f, black[0], black[1], black[2],
-                1.3f, 1.3f, 0.5f, black[0], black[1], black[2],
-                1.3f, 1.3f, 0.46f, black[0], black[1], black[2],
+                // // TV handle wrapper 330-335 // jhamela
+                1.4f, 1.3f, 0.46f, black[0], black[1], black[2],
+                1.4f, 1.3f, 0.5f, black[0], black[1], black[2],
+                1.2f, 1.3f, 0.5f, black[0], black[1], black[2],
+                1.2f, 1.3f, 0.5f, black[0], black[1], black[2],
+                1.2f, 1.3f, 0.46f, black[0], black[1], black[2],
+                1.4f, 1.3f, 0.46f, black[0], black[1], black[2],
 
-                // TV handle wrapper 336-341
-                1.2f, 1.2f, 0.46f, black[0], black[1], black[2],
-                1.3f, 1.3f, 0.46f, black[0], black[1], black[2],
-                1.3f, 1.3f, 0.5f, black[0], black[1], black[2],
-                1.3f, 1.3f, 0.5f, black[0], black[1], black[2],
-                1.2f, 1.2f, 0.5f, black[0], black[1], black[2],
-                1.2f, 1.2f, 0.46f, black[0], black[1], black[2],
+                //// TV handle wrapper 336-341
+                1.2f, 1.3f, 0.46f, black[0], black[1], black[2],
+                1.2f, 1.3f, 0.5f, black[0], black[1], black[2],
+                1.2f, 1.1f, 0.5f, black[0], black[1], black[2],
+                1.2f, 1.1f, 0.5f, black[0], black[1], black[2],
+                1.2f, 1.1f, 0.46f, black[0], black[1], black[2],
+                1.2f, 1.3f, 0.46f, black[0], black[1], black[2],
 
-                // TV handle wrapper 342-347
-                1.3f, 1.1f, 0.46f, black[0], black[1], black[2],
-                1.2f, 1.2f, 0.46f, black[0], black[1], black[2],
-                1.2f, 1.2f, 0.5f, black[0], black[1], black[2],
-                1.2f, 1.2f, 0.5f, black[0], black[1], black[2],
-                1.3f, 1.1f, 0.5f, black[0], black[1], black[2],
-                1.3f, 1.1f, 0.46f, black[0], black[1], black[2],
-                // TV handle top 348-353
-                1.2f, 1.2f, 0.5f, black[0], black[1], black[2],
-                1.3f, 1.1f, 0.5f, black[0], black[1], black[2],
-                1.4f, 1.2f, 0.5f, black[0], black[1], black[2],
-                1.4f, 1.2f, 0.5f, black[0], black[1], black[2],
-                1.3f, 1.3f, 0.5f, black[0], black[1], black[2],
-                1.2f, 1.2f, 0.5f, black[0], black[1], black[2],
+                //// TV handle wrapper 342-347
+                1.2f, 1.1f, 0.46f, black[0], black[1], black[2],
+                1.2f, 1.1f, 0.5f, black[0], black[1], black[2],
+                1.4f, 1.1f, 0.5f, black[0], black[1], black[2],
+                1.4f, 1.1f, 0.5f, black[0], black[1], black[2],
+                1.4f, 1.1f, 0.46f, black[0], black[1], black[2],
+                1.2f, 1.1f, 0.46f, black[0], black[1], black[2],
+                //// TV handle top 348-353
+                1.2f, 1.3f, 0.5f, silverD[0], silverD[1], silverD[2],
+                1.2f, 1.1f, 0.5f, silverD[0], silverD[1], silverD[2],
+                1.4f, 1.1f, 0.5f, silverD[0], silverD[1], silverD[2],
+                1.4f, 1.1f, 0.5f, silverD[0], silverD[1], silverD[2],
+                1.4f, 1.3f, 0.5f, silverD[0], silverD[1], silverD[2],
+                1.2f, 1.3f, 0.5f, silverD[0], silverD[1], silverD[2],
 
-                // TV Back face 354-359
-                0.9f, 1.3f, 0.5f, black[0], black[1], black[2],
-                1.8f, 1.2f, 0.5f, black[0], black[1], black[2],
-                1.8f, 1.2f, 1.0f, black[0], black[1], black[2],
-                1.8f, 1.2f, 1.0f, black[0], black[1], black[2],
-                0.9f, 1.3f, 1.0f, black[0], black[1], black[2],
-                0.9f, 1.3f, 0.5f, black[0], black[1], black[2],
+                // TV Bottom face 354-359
+                0.75f, 1.35f, 0.51f, black[0], black[1], black[2],
+                1.75f, 0.95f, 0.51f, black[0], black[1], black[2],
+                1.8f, 1.0f, 0.51f, black[0], black[1], black[2],
+                1.8f, 1.0f, 0.51f, black[0], black[1], black[2],
+                0.8f, 1.4f, 0.51f, black[0], black[1], black[2],
+                0.75f, 1.35f, 0.51f, black[0], black[1], black[2],
 
-                // TV Front face 360-365
-                0.9f, 1.2f, 0.5f, black[0], black[1], black[2],
-                1.8f, 1.1f, 0.5f, black[0], black[1], black[2],
-                1.8f, 1.1f, 1.0f, black[0], black[1], black[2],
-                1.8f, 1.1f, 1.0f, black[0], black[1], black[2],
-                0.9f, 1.2f, 1.0f, black[0], black[1], black[2],
-                0.9f, 1.2f, 0.5f, black[0], black[1], black[2],
+                // TV Top face 360-365
+                0.75f, 1.35f, 1.0f, black[0], black[1], black[2],
+                1.75f, 0.95f, 1.0f, black[0], black[1], black[2],
+                1.8f, 1.0f, 1.0f, black[0], black[1], black[2],
+                1.8f, 1.0f, 1.0f, black[0], black[1], black[2],
+                0.8f, 1.4f, 1.0f, black[0], black[1], black[2],
+                0.75f, 1.35f, 1.0f, black[0], black[1], black[2],
 
-                // TV side wrapper 366-371
-                0.9f, 1.2f, 1.0f, black[0], black[1], black[2],
-                0.9f, 1.3f, 1.0f, black[0], black[1], black[2],
-                0.9f, 1.3f, 0.5f, black[0], black[1], black[2],
-                0.9f, 1.3f, 0.5f, black[0], black[1], black[2],
-                0.9f, 1.2f, 0.5f, black[0], black[1], black[2],
-                0.9f, 1.2f, 1.0f, black[0], black[1], black[2],
+                // TV Left Side Face 366-371
+                1.75f, 0.95f, 0.51f, black[0], black[1], black[2],
+                1.75f, 0.95f, 1.0f, black[0], black[1], black[2],
+                1.8f, 1.0f, 1.0f, black[0], black[1], black[2],
+                1.8f, 1.0f, 1.0f, black[0], black[1], black[2],
+                1.8f, 1.0f, 0.51f, black[0], black[1], black[2],
+                1.75f, 0.95f, 0.51f, black[0], black[1], black[2],
 
-                // TV side wrapper 372-377
-                1.8f, 1.1f, 1.0f, black[0], black[1], black[2],
-                1.8f, 1.2f, 1.0f, black[0], black[1], black[2],
-                1.8f, 1.2f, 0.5f, black[0], black[1], black[2],
-                1.8f, 1.2f, 0.5f, black[0], black[1], black[2],
-                1.8f, 1.1f, 0.5f, black[0], black[1], black[2],
-                1.8f, 1.1f, 1.0f, black[0], black[1], black[2],
+                // TV Right Side Face 372-377
+                0.8f, 1.4f, 0.51f, black[0], black[1], black[2],
+                0.8f, 1.4f, 1.0f, black[0], black[1], black[2],
+                0.75f, 1.35f, 1.0f, black[0], black[1], black[2],
+                0.75f, 1.35f, 1.0f, black[0], black[1], black[2],
+                0.75f, 1.35f, 0.51f, black[0], black[1], black[2],
+                0.8f, 1.4f, 0.51f, black[0], black[1], black[2],
 
-                // TV bottom wrapper 378-383
-                1.8f, 1.2f, 0.5f, black[0], black[1], black[2],
-                0.9f, 1.3f, 0.5f, black[0], black[1], black[2],
-                0.9f, 1.2f, 0.5f, black[0], black[1], black[2],
-                0.9f, 1.2f, 0.5f, black[0], black[1], black[2],
-                1.8f, 1.1f, 0.5f, black[0], black[1], black[2],
-                1.8f, 1.2f, 0.5f, black[0], black[1], black[2],
+                // TV Back Face 378-383
+                1.8f, 1.0f, 0.51f, black[0], black[1], black[2],
+                1.8f, 1.0f, 1.0f, black[0], black[1], black[2],
+                0.8f, 1.4f, 1.0f, black[0], black[1], black[2],
+                0.8f, 1.4f, 1.0f, black[0], black[1], black[2],
+                0.8f, 1.4f, 0.51f, black[0], black[1], black[2],
+                1.8f, 1.0f, 0.51f, black[0], black[1], black[2],
 
-                // TV top wrapper 384-389
-                1.8f, 1.2f, 1.0f, black[0], black[1], black[2],
-                0.9f, 1.3f, 1.0f, black[0], black[1], black[2],
-                0.9f, 1.2f, 1.0f, black[0], black[1], black[2],
-                0.9f, 1.2f, 1.0f, black[0], black[1], black[2],
-                1.8f, 1.1f, 1.0f, black[0], black[1], black[2],
-                1.8f, 1.2f, 1.0f, black[0], black[1], black[2],
+                // TV Back Face 384-389
+                0.75f, 1.35f, 0.51f, black[0], black[1], black[2],
+                0.75f, 1.35f, 1.0f, black[0], black[1], black[2],
+                1.75f, 0.95f, 1.0f, black[0], black[1], black[2],
+                1.75f, 0.95f, 1.0f, black[0], black[1], black[2],
+                1.75f, 0.95f, 0.51f, black[0], black[1], black[2],
+                0.75f, 1.35f, 0.51f, black[0], black[1], black[2],
+
+                // TV Glass Face 390-395
+                0.77f, 1.33f, 0.54f, silverD[0], silverD[1], silverD[2],
+                0.77f, 1.33f, 0.97f, silverD[0], silverD[1], silverD[2],
+                1.73f, 0.93f, 0.97f, silverD[0], silverD[1], silverD[2],
+                1.73f, 0.93f, 0.97f, silverD[0], silverD[1], silverD[2],
+                1.73f, 0.93f, 0.54f, silverD[0], silverD[1], silverD[2],
+                0.77f, 1.33f, 0.54f, silverD[0], silverD[1], silverD[2],
+
+
+                
 
     };
 
-    const int total = 390;
+    const int total = 396;
     
     unsigned int cube_indices[total] = {
         /*0, 1, 2, 3, 4, 5,
