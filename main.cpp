@@ -653,11 +653,143 @@ int main()
                 1.73f, 0.93f, 0.97f, silverD[0], silverD[1], silverD[2],
                 1.73f, 0.93f, 0.54f, silverD[0], silverD[1], silverD[2],
                 0.77f, 1.33f, 0.54f, silverD[0], silverD[1], silverD[2],
+
+                // Piano bottom plane 414-419
+                -0.6, 1.8f, 0.4f, black[0], black[1], black[2],
+                -1.6f, 1.8f, 0.4f, black[0], black[1], black[2],
+                -1.6f, 0.8f, 0.4f, black[0], black[1], black[2],
+                -1.6f, 0.8f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 0.8f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 1.8f, 0.4f, black[0], black[1], black[2],
+
+                 // Piano top plane 420-425
+                -0.6, 1.8f, 0.5f, black[0], black[1], black[2],
+                -1.6f, 1.8f, 0.5f, black[0], black[1], black[2],
+                -1.6f, 0.8f, 0.5f, black[0], black[1], black[2],
+                -1.6f, 0.8f, 0.5f, black[0], black[1], black[2],
+                -0.6f, 0.8f, 0.5f, black[0], black[1], black[2],
+                -0.6f, 1.8f, 0.5f, black[0], black[1], black[2],
+
+                 // Piano back plane 426-431
+                -0.6, 1.8f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 1.8f, 0.5f, black[0], black[1], black[2],
+                -1.6f, 1.8f, 0.5f, black[0], black[1], black[2],
+                -1.6f, 1.8f, 0.5f, black[0], black[1], black[2],
+                -1.6f, 1.8f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 1.8f, 0.4f, black[0], black[1], black[2],
+
+                // Piano left plane 432-437
+                -1.6, 1.8f, 0.4f, black[0], black[1], black[2],
+                -1.6f, 1.8f, 0.5f, black[0], black[1], black[2],
+                -1.6f, 0.8f, 0.5f, black[0], black[1], black[2],
+                -1.6f, 0.8f, 0.5f, black[0], black[1], black[2],
+                -1.6f, 0.8f, 0.4f, black[0], black[1], black[2],
+                -1.6f, 1.8f, 0.4f, black[0], black[1], black[2],
+
+                // Piano right plane 438-443
+                -0.6, 0.8f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 0.8f, 0.5f, black[0], black[1], black[2],
+                -0.6f, 1.8f, 0.5f, black[0], black[1], black[2],
+                -0.6f, 1.8f, 0.5f, black[0], black[1], black[2],
+                -0.6f, 1.8f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 0.8f, 0.4f, black[0], black[1], black[2],
+
+                // Piano back plane 444-449
+                -1.6, 0.8f, 0.4f, silverD[0], silverD[1], silverD[2],
+                -1.6f, 0.8f, 0.5f, silverD[0], silverD[1], silverD[2],
+                -0.6f, 0.8f, 0.5f, silverD[0], silverD[1], silverD[2],
+                -0.6f, 0.8f, 0.5f, silverD[0], silverD[1], silverD[2],
+                -0.6f, 0.8f, 0.4f, silverD[0], silverD[1], silverD[2],
+                -1.6f, 0.8f, 0.4f, silverD[0], silverD[1], silverD[2],
+
+                // Piano Keyboard bottom face 450-455
+                -1.6, 0.8f, 0.4f, black[0], black[1], black[2],
+                -1.6f, 0.6f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 0.6f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 0.6f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 0.8f, 0.4f, black[0], black[1], black[2],
+                -1.6f, 0.8f, 0.4f, black[0], black[1], black[2],
+
+                // Piano Keyboard top face 456-461
+                -1.6, 0.8f, 0.43f, black[0], black[1], black[2],
+                -1.6f, 0.6f, 0.43f, black[0], black[1], black[2],
+                -0.6f, 0.6f, 0.43f, black[0], black[1], black[2],
+                -0.6f, 0.6f, 0.43f, black[0], black[1], black[2],
+                -0.6f, 0.8f, 0.43f, black[0], black[1], black[2],
+                -1.6f, 0.8f, 0.43f, black[0], black[1], black[2],
+
+                // Piano Keyboard front face 462-467
+                -1.6, 0.6f, 0.4f, silverD[0], silverD[1], silverD[2],
+                -1.6f, 0.6f, 0.43f, silverD[0], silverD[1], silverD[2],
+                -0.6f, 0.6f, 0.43f, silverD[0], silverD[1], silverD[2],
+                -0.6f, 0.6f, 0.43f, silverD[0], silverD[1], silverD[2],
+                -0.6f, 0.6f, 0.4f, silverD[0], silverD[1], silverD[2],
+                -1.6f, 0.6f, 0.4f, silverD[0], silverD[1], silverD[2],
+
+                // Piano Keyboard right face 468-473
+                -0.6, 0.6f, 0.4f, silverD[0], silverD[1], silverD[2],
+                -0.6f, 0.6f, 0.43f, silverD[0], silverD[1], silverD[2],
+                -0.6f, 0.8f, 0.43f, silverD[0], silverD[1], silverD[2],
+                -0.6f, 0.8f, 0.43f, silverD[0], silverD[1], silverD[2],
+                -0.6f, 0.8f, 0.4f, silverD[0], silverD[1], silverD[2],
+                -0.6f, 0.6f, 0.4f, silverD[0], silverD[1], silverD[2],
+
+                // Piano Keyboard left face 474-479
+                -1.6, 0.8f, 0.4f, black[0], black[1], black[2],
+                -1.6f, 0.8f, 0.43f, black[0], black[1], black[2],
+                -1.6f, 0.6f, 0.43f, black[0], black[1], black[2],
+                -1.6f, 0.6f, 0.43f, black[0], black[1], black[2],
+                -1.6f, 0.6f, 0.4f, black[0], black[1], black[2],
+                -1.6f, 0.8f, 0.4f, black[0], black[1], black[2],
+
+                // left triangle connected piano with keyboard face 480-485
+                -1.6, 0.8f, 0.43f, black[0], black[1], black[2],
+                -1.6f, 0.6f, 0.43f, black[0], black[1], black[2],
+                -1.6f, 0.8f, 0.5f, black[0], black[1], black[2],
+                -1.55, 0.8f, 0.43f, black[0], black[1], black[2],
+                -1.55f, 0.6f, 0.43f, black[0], black[1], black[2],
+                -1.55f, 0.8f, 0.5f, black[0], black[1], black[2],
+
+                // right triangle connected piano with keyboard face 486-491
+                -0.65f, 0.8f, 0.43f, black[0], black[1], black[2],
+                -0.65f, 0.6f, 0.43f, black[0], black[1], black[2],
+                -0.65f, 0.8f, 0.5f, black[0], black[1], black[2],
+                -0.6f, 0.8f, 0.43f, black[0], black[1], black[2],
+                -0.6f, 0.6f, 0.43f, black[0], black[1], black[2],
+                -0.6f, 0.8f, 0.5f, black[0], black[1], black[2],
+
+                // left triangle top face 492-497
+                -1.55, 0.8f, 0.5f, silverD[0], silverD[1], silverD[2],
+                -1.6f, 0.8f, 0.5f, silverD[0], silverD[1], silverD[2],
+                -1.6f, 0.6f, 0.43f, silverD[0], silverD[1], silverD[2],
+                -1.6f, 0.6f, 0.43f, silverD[0], silverD[1], silverD[2],
+                -1.55f, 0.6f, 0.43f, silverD[0], silverD[1], silverD[2],
+                -1.55f, 0.8f, 0.5f, silverD[0], silverD[1], silverD[2],
+
+                // right triangle top face 498-503
+                -0.6, 0.8f, 0.5f, silverD[0], silverD[1], silverD[2],
+                -0.65f, 0.8f, 0.5f, silverD[0], silverD[1], silverD[2],
+                -0.65f, 0.6f, 0.43f, silverD[0], silverD[1], silverD[2],
+                -0.65f, 0.6f, 0.43f, silverD[0], silverD[1], silverD[2],
+                -0.6, 0.6f, 0.43f, silverD[0], silverD[1], silverD[2],
+                -0.6, 0.8f, 0.5f, silverD[0], silverD[1], silverD[2],
+
+                // Pian Upper Plane Bottom Triangle Shape 504-509
+                    // 1st triangle
+                -1.6, 1.8f, 0.5f, silverD[0], silverD[1], silverD[2],
+                -1.6f, 0.8f, 0.5f, silverD[0], silverD[1], silverD[2],
+                -0.6f, 0.6f, 0.9f, silverD[0], silverD[1], silverD[2],
+
+
+
+
+
+
                                 
 
     };
 
-    const int total = 414;
+    const int total = 522;
     
     unsigned int cube_indices[total] = {
         /*0, 1, 2, 3, 4, 5,
