@@ -44,7 +44,7 @@ float lastY = SCR_HEIGHT / 2.0f;
 bool firstMouse = true;
 
 // basic camera
-float eyeX = 0.0, eyeY = -3.0, eyeZ = 3.0;
+float eyeX = 0.0, eyeY = -3.0, eyeZ = 2.0;
 float lookAtX = 0.0, lookAtY = 0.0, lookAtZ = 0.0;
 glm::vec3 V = glm::vec3(0.0f, 1.0f, 0.0f);
 BasicCamera basic_camera(eyeX, eyeY, eyeZ, lookAtX, lookAtY, lookAtZ, V);
@@ -68,7 +68,7 @@ int main()
 
     // glfw window creation
     // --------------------
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "CSE 4208: Computer Graphics Laboratory", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Assignment 2", NULL, NULL);
     if (window == NULL)
     {
         std::cout << "Failed to create GLFW window" << std::endl;
@@ -101,6 +101,7 @@ int main()
 
 
     float wallC1[] = {0.6f, 0.4f, 0.0f};
+    float wallC2[] = { 0.6f, 0.4f, 0.4f };
     float harmony[] = { 0.13f,0.13f,0.13f };
     float hShade[] = { 0.38f,0.38f,0.38f };
     float wood[] = { 1.0f,0.6f,0.2f };
@@ -111,6 +112,7 @@ int main()
     float sofa[] = { 0.7f, 0.3f, 0.2f };
     float blue[] = { 0.0f, 0.0f, 1.0f };
     float blueL[] = { 0.0f, 0.4f, 1.0f };
+    float ground[] = { 0.9,0.9,0.9 };
 
 
 
@@ -119,28 +121,36 @@ int main()
     float cube_vertices[] = {
         
         // Bottom plane 0,1,2,3,4,5
-         -2.0f, -2.0f, 0.0f, 1.0f, 0.0f, 1.0f,
-         2.0f, -2.0f, 0.0f, 1.0f, 0.0f, 1.0f,
-         2.0f, 2.0f, 0.0f, 1.0f, 0.0f, 1.0f,
-         2.0f, 2.0f, 0.0f, 1.0f, 0.0f, 1.0f,
-         -2.0f, 2.0f, 0.0f, 1.0f, 0.0f, 1.0f,
-         -2.0f, -2.0f, 0.0f, 1.0f, 0.0f, 1.0f,
+         -2.0f, -2.0f, 0.0f, ground[0], ground[1], ground[2],
+         2.0f, -2.0f, 0.0f, ground[0], ground[1], ground[2],
+         2.0f, 2.0f, 0.0f, ground[0], ground[1], ground[2],
+         2.0f, 2.0f, 0.0f, ground[0], ground[1], ground[2],
+         -2.0f, 2.0f, 0.0f, ground[0], ground[1], ground[2],
+         -2.0f, -2.0f, 0.0f, ground[0], ground[1], ground[2],
+
+         // Top plane 
+         /*-2.0f, -2.0f, 2.0f, ground[0], ground[1], ground[2],
+         2.0f, -2.0f, 2.0f, ground[0], ground[1], ground[2],
+         2.0f, 2.0f, 2.0f, ground[0], ground[1], ground[2],
+         2.0f, 2.0f, 2.0f, ground[0], ground[1], ground[2],
+         -2.0f, 2.0f, 2.0f, ground[0], ground[1], ground[2],
+         -2.0f, -2.0f, 2.0f, ground[0], ground[1], ground[2],*/
 
          // Right Plane 6,7,8,9,10,11,
-         /*2.0f, -2.0f, 0.0f, 1.0f, 0.0f, 0.0f,
-         2.0f, -2.0f, 2.0f, 1.0f, 0.0f, 0.0f,
-         2.0f, 2.0f, 2.0f, 1.0f, 0.0f, 0.0f,
-         2.0f, 2.0f, 2.0f, 1.0f, 0.0f, 0.0f,
-         2.0f, 2.0f, 0.0f, 1.0f, 0.0f, 0.0f,
-         2.0f, -2.0f, 0.0f, 1.0f, 0.0f, 0.0f,*/
+         2.0f, -2.0f, 0.0f, wallC2[0], wallC2[1], wallC2[2],
+         2.0f, -2.0f, 2.0f, wallC2[0], wallC2[1], wallC2[2],
+         2.0f, 2.0f, 2.0f, wallC2[0], wallC2[1], wallC2[2],
+         2.0f, 2.0f, 2.0f, wallC2[0], wallC2[1], wallC2[2],
+         2.0f, 2.0f, 0.0f, wallC2[0], wallC2[1], wallC2[2],
+         2.0f, -2.0f, 0.0f, wallC2[0], wallC2[1], wallC2[2],
 
          // Left Plane 12,13,14,15,16,17
-         /*-2.0f, -2.0f, 0.0f, 1.0f, 0.0f, 0.0f,
-         -2.0f, -2.0f, 2.0f, 1.0f, 0.0f, 0.0f,
-         -2.0f, 2.0f, 2.0f, 1.0f, 0.0f, 0.0f,
-         -2.0f, 2.0f, 2.0f, 1.0f, 0.0f, 0.0f,
-         -2.0f, 2.0f, 0.0f, 1.0f, 0.0f, 0.0f,
-         -2.0f, -2.0f, 0.0f, 1.0f, 0.0f, 0.0f,*/
+         -2.0f, -2.0f, 0.0f, wallC2[0], wallC2[1], wallC2[2],
+         -2.0f, -2.0f, 2.0f, wallC2[0], wallC2[1], wallC2[2],
+         -2.0f, 2.0f, 2.0f, wallC2[0], wallC2[1], wallC2[2],
+         -2.0f, 2.0f, 2.0f, wallC2[0], wallC2[1], wallC2[2],
+         -2.0f, 2.0f, 0.0f, wallC2[0], wallC2[1], wallC2[2],
+         -2.0f, -2.0f, 0.0f, wallC2[0], wallC2[1], wallC2[2],
 
          // back plane 18,19,20,21,22,23
          -2.0f, 2.0f, 0.0f, wallC1[0], wallC1[1], wallC1[2],
@@ -1101,13 +1111,325 @@ int main()
                     -1.8f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
                     -1.7f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
                     -1.7f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+
+                    // Front Chair Left Side
+                    // Bottom face 750-755
+                    -0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // Bottom face 756-761
+                    -0.8f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+
+                    // chair wrapper 762-767
+                    -0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair wrapper 768-773
+                    -0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair wrapper 774-779
+                    -0.6f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair wrapper 780-785
+                    -0.8f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair legs 786-791
+                    -0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.78f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.78f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.78f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair legs 792-797
+                    -0.8f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.58f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair legs 798-803
+                    -0.62f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.62f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.62f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    
+                    // chair legs 804-809
+                    -0.6f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.58f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair legs 810-815
+                    -0.6f, -1.42f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.42f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.42f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair legs 816-821
+                    -0.6f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.62f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.62f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.62f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair legs 822-827
+                    -0.78f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.78f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.78f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                   
+                    // chair legs 828-833
+                    -0.8f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.42f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.42f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.42f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair upper part back face 834-839
+                    -0.6f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair upper part front face 840-845
+                    -0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                     // chair upper part wrapper 846-851
+                    -0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                     // chair upper part wrapper 852-857
+                    -0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair upper part wrapper 858-863
+                    -0.8f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.6f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.6f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    -0.6f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    -0.8f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+
+                    // Front Chair Right Side
+                    // Bottom face 864-869
+                    0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // Bottom face 870-875
+                    0.8f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+
+                    // chair wrapper 876-881
+                    0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair wrapper 882-887
+                    0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair wrapper 888-893
+                    0.6f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair wrapper 894-899
+                    0.8f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.4f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.33f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair legs 900-905
+                    0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.78f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.78f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.78f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair legs 906-911
+                    0.8f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.58f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair legs 912-917
+                    0.62f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.62f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.62f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    
+                    // chair legs 918-923
+                    0.6f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.58f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair legs 924-929
+                    0.6f, -1.42f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.42f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.42f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair legs 930-935
+                    0.6f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.62f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.62f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.62f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair legs 936-941
+                    0.78f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.78f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.78f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                   
+                    // chair legs 942-947
+                    0.8f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.4f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.42f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.42f, 0.0f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.42f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.4f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair upper part back face 948-953
+                    0.6f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair upper part front face 954-959
+                    0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                     // chair upper part wrapper 960-965
+                    0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                     // chair upper part wrapper 966-971
+                    0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.58f, 0.3f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.3f, silverD[0], silverD[1], silverD[2],
+
+                    // chair upper part wrapper 972-977
+                    0.8f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.6f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.6f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    0.6f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+                    0.8f, -1.58f, 0.7f, silverD[0], silverD[1], silverD[2],
+
+
+
+
                                 
 
     };
 
-    // table top bottom face +6 and sofa foam top and front side +12
+    // table top bottom face +6 and sofa foam top and front side +12 + top plane +6
 
-    const int total = 750;
+    const int total = 984;
     
     unsigned int cube_indices[total] = {
         /*0, 1, 2, 3, 4, 5,
@@ -1270,19 +1592,51 @@ void processInput(GLFWwindow* window)
         glfwSetWindowShouldClose(window, true);
 
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
-        camera.ProcessKeyboard(FORWARD, deltaTime);
+        translate_Y -= 0.001;
     }
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
-        camera.ProcessKeyboard(BACKWARD, deltaTime);
+        translate_Y += 0.001;
     }
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
-        camera.ProcessKeyboard(LEFT, deltaTime);
+        translate_X -= 0.001;
     }
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
-        camera.ProcessKeyboard(RIGHT, deltaTime);
+        translate_X += 0.001;
+        //camera.ProcessKeyboard(RIGHT, deltaTime);
     }
 
-    if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
+    if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS) {
+        translate_Z -= 0.001;
+        //std::cout << translate_X << translate_Y << translate_Z << std::endl;
+    }
+    if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS) {
+        translate_Z += 0.001;
+
+        //std::cout << translate_X << translate_Y << translate_Z << std::endl;
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_F) == GLFW_PRESS) {
+        rotateAngle_Z += 0.01;
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_B) == GLFW_PRESS) {
+        eyeZ = 7.0;
+        eyeY = -4.0;
+        basic_camera.changeEye(eyeX, eyeY, eyeZ);
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_N) == GLFW_PRESS) {
+        eyeZ = 2.0;
+        eyeY = -3.0;
+        eyeX = 0.0;
+        basic_camera.changeEye(eyeX, eyeY, eyeZ);
+    }
+
+
+
+
+
+    /*if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS)
     {
         if (rotateAxis_X) rotateAngle_X -= 1;
         else if (rotateAxis_Y) rotateAngle_Y -= 1;
@@ -1300,6 +1654,7 @@ void processInput(GLFWwindow* window)
     if (glfwGetKey(window, GLFW_KEY_N) == GLFW_PRESS) scale_Y -= 0.001;
     if (glfwGetKey(window, GLFW_KEY_M) == GLFW_PRESS) scale_Z += 0.001;
     if (glfwGetKey(window, GLFW_KEY_U) == GLFW_PRESS) scale_Z -= 0.001;
+    */
 
     if (glfwGetKey(window, GLFW_KEY_X) == GLFW_PRESS)
     {
@@ -1307,8 +1662,6 @@ void processInput(GLFWwindow* window)
         rotateAxis_X = 1.0;
         rotateAxis_Y = 0.0;
         rotateAxis_Z = 0.0;
-
-        std::cout << rotateAngle_X << " " << rotateAngle_Y << " " << rotateAngle_Z << std::endl;
     }
     if (glfwGetKey(window, GLFW_KEY_Y) == GLFW_PRESS)
     {
@@ -1316,8 +1669,6 @@ void processInput(GLFWwindow* window)
         rotateAxis_X = 0.0;
         rotateAxis_Y = 1.0;
         rotateAxis_Z = 0.0;
-
-        std::cout << rotateAngle_X << " " << rotateAngle_Y << " " << rotateAngle_Z << std::endl;
     }
     if (glfwGetKey(window, GLFW_KEY_Z) == GLFW_PRESS)
     {
@@ -1325,11 +1676,9 @@ void processInput(GLFWwindow* window)
         rotateAxis_X = 0.0;
         rotateAxis_Y = 0.0;
         rotateAxis_Z = 1.0;
-
-        std::cout << rotateAngle_X << " " << rotateAngle_Y << " " << rotateAngle_Z << std::endl;
     }
 
-    if (glfwGetKey(window, GLFW_KEY_H) == GLFW_PRESS)
+    /*if (glfwGetKey(window, GLFW_KEY_H) == GLFW_PRESS)
     {
         eyeX += 2.5 * deltaTime;
         basic_camera.changeEye(eyeX, eyeY, eyeZ);
@@ -1400,7 +1749,7 @@ void processInput(GLFWwindow* window)
     if (glfwGetKey(window, GLFW_KEY_9) == GLFW_PRESS)
     {
         basic_camera.changeViewUpVector(glm::vec3(0.0f, 0.0f, 1.0f));
-    }
+    }*/
 
 }
 
