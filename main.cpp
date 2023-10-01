@@ -108,6 +108,10 @@ int main()
     float silverD[] = { 0.5f,0.5f,0.5f };
     float yWhite[] = { 1.0f,1.0f,0.8f };
     float black[] = { 0.0f, 0.0f, 0.0f };
+    float sofa[] = { 0.7f, 0.3f, 0.2f };
+    float blue[] = { 0.0f, 0.0f, 1.0f };
+    float blueL[] = { 0.0f, 0.4f, 1.0f };
+
 
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
@@ -147,16 +151,23 @@ int main()
          -2.0f, 2.0f, 0.0f, wallC1[0], wallC1[1], wallC1[2],
 
         // Table
-        // Table top 24,25,26,27,28,29
+        // Table top 24-29
         -1.0f, -1.5f, 0.5f, wood[0], wood[1], wood[2],
         1.0f, -1.5f, 0.5f, wood[0], wood[1], wood[2],
         1.0f, -0.5f, 0.5f, wood[0], wood[1], wood[2],
         1.0f, -0.5f, 0.5f, wood[0], wood[1], wood[2],
         -1.0f, -0.5f, 0.5f, wood[0], wood[1], wood[2],
         -1.0f, -1.5f, 0.5f, wood[0], wood[1], wood[2],
+        // Table top bottom face 612-617
+        -1.0f, -1.5f, 0.42f, wood[0], wood[1], wood[2],
+        1.0f, -1.5f, 0.42f, wood[0], wood[1], wood[2],
+        1.0f, -0.5f, 0.42f, wood[0], wood[1], wood[2],
+        1.0f, -0.5f, 0.42f, wood[0], wood[1], wood[2],
+        -1.0f, -0.5f, 0.42f, wood[0], wood[1], wood[2],
+        -1.0f, -1.5f, 0.42f, wood[0], wood[1], wood[2],
 
         // Table 1st Leg
-        // 1st side of leg 30,31,32,33,34,35
+        // 1st side of leg 30-35
         -0.98f, -0.52f, 0.0f, woodD[0], woodD[1], woodD[2],
         -0.96f, -0.52f, 0.0f, woodD[0], woodD[1], woodD[2],
         -0.96f, -0.52f, 0.5f, woodD[0], woodD[1], woodD[2],
@@ -317,152 +328,168 @@ int main()
             -1.0f, -0.5f, 0.5f, woodD[0], woodD[1], woodD[2],
 
             // Sofa bottom side 150-155
-            1.3f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.3f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            // Sofa top side 156-161
-            1.3f, -1.4f, 0.3f, 0.0f, 0.0f, 1.0f,
-            1.8f, -1.4f, 0.3f, 0.0f, 0.0f, 1.0f,
-            1.8f, -0.5f, 0.3f, 0.0f, 0.0f, 1.0f,
-            1.8f, -0.5f, 0.3f, 0.0f, 0.0f, 1.0f,
-            1.3f, -0.5f, 0.3f, 0.0f, 0.0f, 1.0f,
-            1.3f, -1.4f, 0.3f, 0.0f, 0.0f, 1.0f,
+            1.3f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.3f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.3f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+            // Sofa foam bottom side 156-161
+            1.3f, -1.4f, 0.3f, blue[0], blue[1], blue[2],
+            1.8f, -1.4f, 0.3f, blue[0], blue[1], blue[2],
+            1.8f, -0.5f, 0.3f, blue[0], blue[1], blue[2],
+            1.8f, -0.5f, 0.3f, blue[0], blue[1], blue[2],
+            1.3f, -0.5f, 0.3f, blue[0], blue[1], blue[2],
+            1.3f, -1.4f, 0.3f, blue[0], blue[1], blue[2],
+
+            // Sofa foam top side 600-605
+            1.3f, -1.4f, 0.5f, blue[0], blue[1], blue[2],
+            1.8f, -1.4f, 0.5f, blue[0], blue[1], blue[2],
+            1.8f, -0.5f, 0.5f, blue[0], blue[1], blue[2],
+            1.8f, -0.5f, 0.5f, blue[0], blue[1], blue[2],
+            1.3f, -0.5f, 0.5f, blue[0], blue[1], blue[2],
+            1.3f, -1.4f, 0.5f, blue[0], blue[1], blue[2],
+
+            // Sofa foam front side 606-611
+            1.3f, -0.5f, 0.3f, blue[0], blue[1], blue[2],
+            1.3f, -0.5f, 0.5f, blue[0], blue[1], blue[2],
+            1.3f, -1.4f, 0.5f, blue[0], blue[1], blue[2],
+            1.3f, -1.4f, 0.5f, blue[0], blue[1], blue[2],
+            1.3f, -1.4f, 0.3f, blue[0], blue[1], blue[2],
+            1.3f, -0.5f, 0.3f, blue[0], blue[1], blue[2],
 
             // Sofa back side  back face 162-167
-            1.3f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
+            1.3f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
             //  back side front face 168-173
-            1.3f, -0.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -0.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -0.5f, 0.01f, 0.7f, 0.3f, 0.2f,
+            1.3f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -0.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
             //  back handle top 174-179
-            1.3f, -0.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -0.5f, 0.7f, 0.7f, 0.3f, 0.2f,
+            1.3f, -0.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -0.5f, 0.7f, sofa[0], sofa[1], sofa[2],
             //   back handle front 180-185
-            1.3f, -0.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.3f, -0.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.3f, -0.5f, 0.01f, 0.7f, 0.3f, 0.2f,
+            1.3f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.3f, -0.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.3f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
             //  back handle back 186-191
-            1.8f, -0.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.5f, 0.01f, 0.7f, 0.3f, 0.2f,
+            1.8f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
 
             // front handle front face 192-197
-            1.3f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
+            1.3f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -1.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
             // front handle back face 198-203
-            1.3f, -1.4f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.4f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.4f, 0.01f, 0.7f, 0.3f, 0.2f,
+            1.3f, -1.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -1.4f, 0.01f, sofa[0], sofa[1], sofa[2],
             // front handle top face 204-209
-            1.3f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
+            1.3f, -1.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -1.5f, 0.7f, sofa[0], sofa[1], sofa[2],
             // front handle front face 210-215
-            1.3f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.4f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.3f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
+            1.3f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.3f, -1.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.3f, -1.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.3f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
             // front handle back face 216-221
-            1.8f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.5f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.4f, 0.7f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.4f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
+            1.8f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
             // front sofa front face 222-227
-            1.3f, -0.5f, 0.01f, 0.0f, 0.0f, 0.0f,
-            1.3f, -1.4f, 0.01f, 0.0f, 0.0f, 0.0f,
-            1.3f, -1.4f, 0.3f, 0.0f, 0.0f, 0.0f,
-            1.3f, -1.4f, 0.3f, 0.0f, 0.0f, 0.0f,
-            1.3f, -0.5f, 0.3f, 0.0f, 0.0f, 0.0f,
-            1.3f, -0.5f, 0.01f, 0.0f, 0.0f, 0.0f,
+            1.3f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.3f, -1.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.3f, -1.4f, 0.3f, sofa[0], sofa[1], sofa[2],
+            1.3f, -1.4f, 0.3f, sofa[0], sofa[1], sofa[2],
+            1.3f, -0.5f, 0.3f, sofa[0], sofa[1], sofa[2],
+            1.3f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
 
             // back sofa back face 228-233
-            1.8f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.5f, 0.01f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.4f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.4f, 0.01f, 0.7f, 0.3f, 0.2f,
+            1.8f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
 
             // back sofa front face 234-239
-            1.7f, -0.5f, 0.3f, 0.0f, 0.4f, 1.0f,
-            1.7f, -1.4f, 0.3f, 0.0f, 0.4f, 1.0f,
-            1.7f, -1.4f, 1.0f, 0.0f, 0.4f, 1.0f,
-            1.7f, -1.4f, 1.0f, 0.0f, 0.4f, 1.0f,
-            1.7f, -0.5f, 1.0f, 0.0f, 0.4f, 1.0f,
-            1.7f, -0.5f, 0.3f, 0.0f, 0.4f, 1.0f,
+            1.7f, -0.5f, 0.3f, blueL[0], blueL[1], blueL[2],
+            1.7f, -1.4f, 0.3f, blueL[0], blueL[1], blueL[2],
+            1.7f, -1.4f, 1.0f, blueL[0], blueL[1], blueL[2],
+            1.7f, -1.4f, 1.0f, blueL[0], blueL[1], blueL[2],
+            1.7f, -0.5f, 1.0f, blueL[0], blueL[1], blueL[2],
+            1.7f, -0.5f, 0.3f, blueL[0], blueL[1], blueL[2],
             // back sofa front face right front 240-245
-            1.7f, -0.4f, 0.3f, 0.7f, 0.3f, 0.2f,
-            1.7f, -0.5f, 0.3f, 0.7f, 0.3f, 0.2f,
-            1.7f, -0.5f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.7f, -0.5f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.7f, -0.4f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.7f, -0.4f, 0.3f, 0.7f, 0.3f, 0.2f,
+            1.7f, -0.4f, 0.3f, sofa[0], sofa[1], sofa[2],
+            1.7f, -0.5f, 0.3f, sofa[0], sofa[1], sofa[2],
+            1.7f, -0.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.7f, -0.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.7f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.7f, -0.4f, 0.3f, sofa[0], sofa[1], sofa[2],
 
             // back sofa front face left front 246-251
-            1.7f, -1.4f, 0.3f, 0.7f, 0.3f, 0.2f,
-            1.7f, -1.5f, 0.3f, 0.7f, 0.3f, 0.2f,
-            1.7f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.7f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.7f, -1.4f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.7f, -1.4f, 0.3f, 0.7f, 0.3f, 0.2f,
+            1.7f, -1.4f, 0.3f, sofa[0], sofa[1], sofa[2],
+            1.7f, -1.5f, 0.3f, sofa[0], sofa[1], sofa[2],
+            1.7f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.7f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.7f, -1.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.7f, -1.4f, 0.3f, sofa[0], sofa[1], sofa[2],
 
             // left handle left face 252-257
-            1.8f, -0.4f, 0.3f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.4f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.7f, -0.4f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.7f, -0.4f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.7f, -0.4f, 0.3f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.4f, 0.3f, 0.7f, 0.3f, 0.2f,
+            1.8f, -0.4f, 0.3f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.7f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.7f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.7f, -0.4f, 0.3f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.4f, 0.3f, sofa[0], sofa[1], sofa[2],
 
             // right handle right face 258-263
-            1.8f, -1.5f, 0.3f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.7f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.7f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.7f, -1.5f, 0.3f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.5f, 0.3f, 0.7f, 0.3f, 0.2f,
+            1.8f, -1.5f, 0.3f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.7f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.7f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.7f, -1.5f, 0.3f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.5f, 0.3f, sofa[0], sofa[1], sofa[2],
             // back top face 264-269
-            1.7f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.8f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.4f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.8f, -0.4f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.7f, -0.4f, 1.0f, 0.7f, 0.3f, 0.2f,
-            1.7f, -1.5f, 1.0f, 0.7f, 0.3f, 0.2f,
+            1.7f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.8f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.8f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.7f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+            1.7f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
 
             // TV Box Stand 
                 //bottom 270-275
@@ -727,12 +754,12 @@ int main()
                 -1.6f, 0.6f, 0.4f, silverD[0], silverD[1], silverD[2],
 
                 // Piano Keyboard right face 468-473
-                -0.6, 0.6f, 0.4f, silverD[0], silverD[1], silverD[2],
-                -0.6f, 0.6f, 0.43f, silverD[0], silverD[1], silverD[2],
-                -0.6f, 0.8f, 0.43f, silverD[0], silverD[1], silverD[2],
-                -0.6f, 0.8f, 0.43f, silverD[0], silverD[1], silverD[2],
-                -0.6f, 0.8f, 0.4f, silverD[0], silverD[1], silverD[2],
-                -0.6f, 0.6f, 0.4f, silverD[0], silverD[1], silverD[2],
+                -0.6, 0.6f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 0.6f, 0.43f, black[0], black[1], black[2],
+                -0.6f, 0.8f, 0.43f, black[0], black[1], black[2],
+                -0.6f, 0.8f, 0.43f, black[0], black[1], black[2],
+                -0.6f, 0.8f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 0.6f, 0.4f, black[0], black[1], black[2],
 
                 // Piano Keyboard left face 474-479
                 -1.6, 0.8f, 0.4f, black[0], black[1], black[2],
@@ -781,15 +808,306 @@ int main()
                 -0.6f, 0.6f, 0.9f, silverD[0], silverD[1], silverD[2],
 
 
+                // Piano Legs
+                // 1st leg wrapper 510-515
+                -1.6f, 1.8f, 0.4f, black[0], black[1], black[2],
+                -1.6f, 1.8f, 0.0f, black[0], black[1], black[2],
+                -1.6f, 1.78f, 0.0f, black[0], black[1], black[2],
+                -1.6f, 1.78f, 0.0f, black[0], black[1], black[2],
+                -1.6f, 1.78f, 0.4f, black[0], black[1], black[2],
+                -1.6f, 1.8f, 0.4f, black[0], black[1], black[2],
 
+                // 1st leg wrapper 516-521
+                -1.6f, 1.78f, 0.4f, black[0], black[1], black[2],
+                -1.6f, 1.78f, 0.0f, black[0], black[1], black[2],
+                -1.58f, 1.78f, 0.0f, black[0], black[1], black[2],
+                -1.58f, 1.78f, 0.0f, black[0], black[1], black[2],
+                -1.58f, 1.78f, 0.4f, black[0], black[1], black[2],
+                -1.6f, 1.78f, 0.4f, black[0], black[1], black[2],
 
+                // 1st leg wrapper 516-521
+                -1.58f, 1.78f, 0.4f, black[0], black[1], black[2],
+                -1.58f, 1.78f, 0.0f, black[0], black[1], black[2],
+                -1.58f, 1.8f, 0.0f, black[0], black[1], black[2],
+                -1.58f, 1.8f, 0.0f, black[0], black[1], black[2],
+                -1.58f, 1.8f, 0.4f, black[0], black[1], black[2],
+                -1.58f, 1.78f, 0.4f, black[0], black[1], black[2],
 
+                // 1st leg wrapper 522-527
+                -1.58f, 1.8f, 0.4f, black[0], black[1], black[2],
+                -1.58f, 1.8f, 0.0f, black[0], black[1], black[2],
+                -1.6f, 1.8f, 0.0f, black[0], black[1], black[2],
+                -1.6f, 1.8f, 0.0f, black[0], black[1], black[2],
+                -1.6f, 1.8f, 0.4f, black[0], black[1], black[2],
+                -1.58f, 1.8f, 0.4f, black[0], black[1], black[2],
 
+                // 2nd leg wrapper 528-533
+                -1.6f, 0.82f, 0.4f, black[0], black[1], black[2],
+                -1.6f, 0.82f, 0.0f, black[0], black[1], black[2],
+                -1.6f, 0.8f, 0.0f, black[0], black[1], black[2],
+                -1.6f, 0.8f, 0.0f, black[0], black[1], black[2],
+                -1.6f, 0.8f, 0.4f, black[0], black[1], black[2],
+                -1.6f, 0.82f, 0.4f, black[0], black[1], black[2],
+
+                 // 2nd leg wrapper 534-539
+                -1.6f, 0.8f, 0.4f, black[0], black[1], black[2],
+                -1.6f, 0.8f, 0.0f, black[0], black[1], black[2],
+                -1.58f, 0.8f, 0.0f, black[0], black[1], black[2],
+                -1.58f, 0.8f, 0.0f, black[0], black[1], black[2],
+                -1.58f, 0.8f, 0.4f, black[0], black[1], black[2],
+                -1.6f, 0.8f, 0.4f, black[0], black[1], black[2],
+
+                 // 2nd leg wrapper 540-545
+                -1.58f, 0.8f, 0.4f, black[0], black[1], black[2],
+                -1.58f, 0.8f, 0.0f, black[0], black[1], black[2],
+                -1.58f, 0.82f, 0.0f, black[0], black[1], black[2],
+                -1.58f, 0.82f, 0.0f, black[0], black[1], black[2],
+                -1.58f, 0.82f, 0.4f, black[0], black[1], black[2],
+                -1.58f, 0.8f, 0.4f, black[0], black[1], black[2],
+
+                // 2nd leg wrapper 546-551
+                -1.58f, 0.82f, 0.4f, black[0], black[1], black[2],
+                -1.58f, 0.82f, 0.0f, black[0], black[1], black[2],
+                -1.6f, 0.82f, 0.0f, black[0], black[1], black[2],
+                -1.6f, 0.82f, 0.0f, black[0], black[1], black[2],
+                -1.6f, 0.82f, 0.4f, black[0], black[1], black[2],
+                -1.58f, 0.82f, 0.4f, black[0], black[1], black[2],
+
+                // 3rd leg wrapper 552-557
+                -0.62f, 0.82f, 0.4f, black[0], black[1], black[2],
+                -0.62f, 0.82f, 0.0f, black[0], black[1], black[2],
+                -0.62f, 0.8f, 0.0f, black[0], black[1], black[2],
+                -0.62f, 0.8f, 0.0f, black[0], black[1], black[2],
+                -0.62f, 0.8f, 0.4f, black[0], black[1], black[2],
+                -0.62f, 0.82f, 0.4f, black[0], black[1], black[2],
+
+                // 3rd leg wrapper 558-563
+                -0.62f, 0.8f, 0.4f, black[0], black[1], black[2],
+                -0.62f, 0.8f, 0.0f, black[0], black[1], black[2],
+                -0.6f, 0.8f, 0.0f, black[0], black[1], black[2],
+                -0.6f, 0.8f, 0.0f, black[0], black[1], black[2],
+                -0.6f, 0.8f, 0.4f, black[0], black[1], black[2],
+                -0.62f, 0.8f, 0.4f, black[0], black[1], black[2],
+
+                // 3rd leg wrapper 564-569
+                -0.6f, 0.8f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 0.8f, 0.0f, black[0], black[1], black[2],
+                -0.6f, 0.82f, 0.0f, black[0], black[1], black[2],
+                -0.6f, 0.82f, 0.0f, black[0], black[1], black[2],
+                -0.6f, 0.82f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 0.8f, 0.4f, black[0], black[1], black[2],
+
+                // 3rd leg wrapper 570-575
+                -0.6f, 0.82f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 0.82f, 0.0f, black[0], black[1], black[2],
+                -0.62f, 0.82f, 0.0f, black[0], black[1], black[2],
+                -0.62f, 0.82f, 0.0f, black[0], black[1], black[2],
+                -0.62f, 0.82f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 0.82f, 0.4f, black[0], black[1], black[2],
+
+                // 4th leg wrapper 576-581
+                -0.62f, 1.8f, 0.4f, black[0], black[1], black[2],
+                -0.62f, 1.8f, 0.0f, black[0], black[1], black[2],
+                -0.62f, 1.78f, 0.0f, black[0], black[1], black[2],
+                -0.62f, 1.78f, 0.0f, black[0], black[1], black[2],
+                -0.62f, 1.78f, 0.4f, black[0], black[1], black[2],
+                -0.62f, 1.8f, 0.4f, black[0], black[1], black[2],
+
+                // 4th leg wrapper 582-587
+                -0.62f, 1.78f, 0.4f, black[0], black[1], black[2],
+                -0.62f, 1.78f, 0.0f, black[0], black[1], black[2],
+                -0.6f, 1.78f, 0.0f, black[0], black[1], black[2],
+                -0.6f, 1.78f, 0.0f, black[0], black[1], black[2],
+                -0.6f, 1.78f, 0.4f, black[0], black[1], black[2],
+                -0.62f, 1.78f, 0.4f, black[0], black[1], black[2],
+
+                // 4th leg wrapper 588-593
+                -0.6f, 1.78f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 1.78f, 0.0f, black[0], black[1], black[2],
+                -0.6f, 1.8f, 0.0f, black[0], black[1], black[2],
+                -0.6f, 1.8f, 0.0f, black[0], black[1], black[2],
+                -0.6f, 1.8f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 1.78f, 0.4f, black[0], black[1], black[2],
+
+                // 4th leg wrapper 594-599
+                -0.6f, 1.8f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 1.8f, 0.0f, black[0], black[1], black[2],
+                -0.62f, 1.8f, 0.0f, black[0], black[1], black[2],
+                -0.62f, 1.8f, 0.0f, black[0], black[1], black[2],
+                -0.62f, 1.8f, 0.4f, black[0], black[1], black[2],
+                -0.6f, 1.8f, 0.4f, black[0], black[1], black[2],
+
+                // Left Side Sofa
+                // Sofa bottom side 618-623
+                    -1.3f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    // Sofa foam bottom side 624-629
+                    -1.3f, -1.4f, 0.3f, blue[0], blue[1], blue[2],
+                    -1.8f, -1.4f, 0.3f, blue[0], blue[1], blue[2],
+                    -1.8f, -0.5f, 0.3f, blue[0], blue[1], blue[2],
+                    -1.8f, -0.5f, 0.3f, blue[0], blue[1], blue[2],
+                    -1.3f, -0.5f, 0.3f, blue[0], blue[1], blue[2],
+                    -1.3f, -1.4f, 0.3f, blue[0], blue[1], blue[2],
+
+                    // Sofa foam top side 630-635
+                    -1.3f, -1.4f, 0.5f, blue[0], blue[1], blue[2],
+                    -1.8f, -1.4f, 0.5f, blue[0], blue[1], blue[2],
+                    -1.8f, -0.5f, 0.5f, blue[0], blue[1], blue[2],
+                    -1.8f, -0.5f, 0.5f, blue[0], blue[1], blue[2],
+                    -1.3f, -0.5f, 0.5f, blue[0], blue[1], blue[2],
+                    -1.3f, -1.4f, 0.5f, blue[0], blue[1], blue[2],
+
+                    // Sofa foam front side 636-641
+                    -1.3f, -0.5f, 0.3f, blue[0], blue[1], blue[2],
+                    -1.3f, -0.5f, 0.5f, blue[0], blue[1], blue[2],
+                    -1.3f, -1.4f, 0.5f, blue[0], blue[1], blue[2],
+                    -1.3f, -1.4f, 0.5f, blue[0], blue[1], blue[2],
+                    -1.3f, -1.4f, 0.3f, blue[0], blue[1], blue[2],
+                    -1.3f, -0.5f, 0.3f, blue[0], blue[1], blue[2],
+
+                    // Sofa back side  back face 642-647
+                    -1.3f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    //  back side front face 648-653
+                    -1.3f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -0.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    //  back handle top 654-659
+                    -1.3f, -0.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -0.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    //   back handle front 660-665
+                    -1.3f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -0.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    //  back handle back 666-671
+                    -1.8f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+
+                    // front handle front face 672-677
+                    -1.3f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -1.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    // front handle back face 678-683
+                    -1.3f, -1.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -1.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    // front handle top face 684-689
+                    -1.3f, -1.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -1.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    // front handle front face 690-695
+                    -1.3f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -1.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -1.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    // front handle back face 696-701
+                    -1.8f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.5f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.4f, 0.7f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    // front sofa front face 702-707
+                    -1.3f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -1.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -1.4f, 0.3f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -1.4f, 0.3f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -0.5f, 0.3f, sofa[0], sofa[1], sofa[2],
+                    -1.3f, -0.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+
+                    // back sofa back face 708-713
+                    -1.8f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.5f, 0.01f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.4f, 0.01f, sofa[0], sofa[1], sofa[2],
+
+                    // back sofa front face 714-719
+                    -1.7f, -0.5f, 0.3f, blueL[0], blueL[1], blueL[2],
+                    -1.7f, -1.4f, 0.3f, blueL[0], blueL[1], blueL[2],
+                    -1.7f, -1.4f, 1.0f, blueL[0], blueL[1], blueL[2],
+                    -1.7f, -1.4f, 1.0f, blueL[0], blueL[1], blueL[2],
+                    -1.7f, -0.5f, 1.0f, blueL[0], blueL[1], blueL[2],
+                    -1.7f, -0.5f, 0.3f, blueL[0], blueL[1], blueL[2],
+                    // back sofa front face right front 720-725
+                    -1.7f, -0.4f, 0.3f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -0.5f, 0.3f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -0.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -0.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -0.4f, 0.3f, sofa[0], sofa[1], sofa[2],
+
+                    // back sofa front face left front 726-731
+                    -1.7f, -1.4f, 0.3f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -1.5f, 0.3f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -1.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -1.4f, 0.3f, sofa[0], sofa[1], sofa[2],
+
+                    // left handle left face 732-737
+                    -1.8f, -0.4f, 0.3f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -0.4f, 0.3f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.4f, 0.3f, sofa[0], sofa[1], sofa[2],
+
+                    // right handle right face 738-743
+                    -1.8f, -1.5f, 0.3f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -1.5f, 0.3f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.5f, 0.3f, sofa[0], sofa[1], sofa[2],
+                    // back top face 744-749
+                    -1.7f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.8f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -0.4f, 1.0f, sofa[0], sofa[1], sofa[2],
+                    -1.7f, -1.5f, 1.0f, sofa[0], sofa[1], sofa[2],
                                 
 
     };
 
-    const int total = 522;
+    // table top bottom face +6 and sofa foam top and front side +12
+
+    const int total = 750;
     
     unsigned int cube_indices[total] = {
         /*0, 1, 2, 3, 4, 5,
